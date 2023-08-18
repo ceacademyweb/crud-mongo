@@ -75,8 +75,8 @@ constructor(
     return this.coupleModel.find();
   }
 
-  findOne(id: number) {
-    return this.coupleModel.findById(id).exec();
+  findOne(id: string) {
+    return this.coupleModel.findOne({slug: id}).exec();
   }
 
   update(id: number, updateCoupleDto: UpdateCoupleDto) {

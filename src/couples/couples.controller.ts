@@ -59,7 +59,7 @@ export class CouplesController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: number) {
+  findOne(@Param('id') id: string) {
     return this.couplesService.findOne(id);
   }
 
